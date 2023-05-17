@@ -28,4 +28,6 @@ jobs:
         cache: 'npm'
     - run: npm install && cd tool && npm install && cd ..
     - run: npm run build 
-    - run: npm test
+      env:
+          GH_TOKEN: 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
+    
