@@ -20,10 +20,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Create release
-      run: hub release create -m "$(date)" "v$(date +%s)"
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -31,6 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install && cd tool/ && npm install && cd ..
-    - run: npm run build 
+    - run: npm run build:win64 
       env:
         GH_TOKEN: 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
