@@ -20,8 +20,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Install dependencies
-      run:  apt update && apt install -y git wget
     - name: Checkout
       uses: actions/checkout@v2
     - name: Create release
