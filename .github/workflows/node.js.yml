@@ -29,4 +29,4 @@ jobs:
     - run: npm install && cd tool/ && npm install 
     - run: npm run build 
       env:
-        GH_TOKEN: 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
+        GH_TOKEN: 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
