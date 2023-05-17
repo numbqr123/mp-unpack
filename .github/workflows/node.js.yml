@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install && cd tool/ && npm install 
+    - run: npm install && cd tool/ && npm install && cd ..
     - run: npm run build 
       env:
-        GH_TOKEN: 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
+        GH_TOKEN: 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
